@@ -17,7 +17,7 @@ return {
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			-- colorscheme = "catppuccin",
+			colorscheme = "catppuccin",
 		},
 	},
 	{
@@ -28,7 +28,7 @@ return {
 				local up = require("lazy.status").updates()
                 return up and "󱖗" .. string.sub(up, 4)
 			end
-			opts.sections.lualine_c[3].symbols = { modified = "  ", readonly = "", unnamed = "" }
+			opts.sections.lualine_c[3].symbols = { modified = "  ", readonly = "", unnamed = "" }
 			opts.sections.lualine_x[4] = {
                 updates,
 				cond = require("lazy.status").has_updates,
