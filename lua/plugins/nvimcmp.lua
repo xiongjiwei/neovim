@@ -8,7 +8,7 @@ return {
 					if icons[item.kind] then
 						item.kind = icons[item.kind] .. item.kind
 					end
-					item.abbr = string.sub(item.abbr, 1, 50) .. string.len(item.abbr) > 49 and "..."
+					item.abbr = string.len(item.abbr) > 49 and string.sub(item.abbr, 1, 50) .. "..." or item.abbr
 					return item
 				end,
 			},
