@@ -15,12 +15,6 @@ return {
 		end,
 	},
 	{
-		"LazyVim/LazyVim",
-		opts = {
-			colorscheme = "catppuccin",
-		},
-	},
-	{
 		"nvim-lualine/lualine.nvim",
 		opts = function(_, opts)
 			local Util = require("lazyvim.util")
