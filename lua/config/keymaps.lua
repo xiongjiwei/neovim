@@ -19,3 +19,6 @@ local function map(mode, lhs, rhs, opts)
 
 map("i", "jj", "<esc>")
 map("n", ";", ":", {desc = "enter command", nowait = true, silent = false})
+
+-- save file
+map({ "i", "v", "n", "s" }, "<C-s>", "<cmd>wa<cr><esc>", { desc = "Save file" })
