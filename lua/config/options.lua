@@ -4,5 +4,9 @@
 
 local opt = vim.opt
 
-opt.tabstop=4
-opt.shiftwidth=4
+opt.tabstop = 4
+opt.shiftwidth = 4
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
+opt.foldenable = true
+opt.mouse = ""

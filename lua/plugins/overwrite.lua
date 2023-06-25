@@ -26,11 +26,11 @@ return {
 			local Util = require("lazyvim.util")
 			local function updates()
 				local up = require("lazy.status").updates()
-                return up and "󱖗" .. string.sub(up, 4)
+				return up and "󱖗" .. string.sub(up, 4)
 			end
 			opts.sections.lualine_c[3].symbols = { modified = "  ", readonly = "", unnamed = "" }
 			opts.sections.lualine_x[4] = {
-                updates,
+				updates,
 				cond = require("lazy.status").has_updates,
 				color = Util.fg("Special"),
 			}
@@ -39,5 +39,25 @@ return {
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		enabled = false,
+	},
+	{
+		"nvim-treesitter/nvim-treesitter",
+		init = function()
+			require("nvim-treesitter.install").prefer_git = true
+		end,
+		keys = {
+			{ "<c-w>", desc = "Increment selection" },
+			{ "<bs>", desc = "Decrement selection", mode = "x" },
+		},
+		opts = {
+			incremental_selection = {
+				keymaps = {
+					init_selection = "<c-w>",
+					node_incremental = "<c-w>",
+					scope_incremental = false,
+					node_decremental = "<bs>",
+				},
+			},
+		},
 	},
 }

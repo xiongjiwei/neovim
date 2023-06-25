@@ -27,3 +27,9 @@ vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "InsertEnter", "WinLeave"
 		end
 	end,
 })
+
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+	group = vim.api.nvim_create_augroup("z_operation", { clear = true }),
+	pattern = { "*" },
+	command = "normal zx zR",
+})
