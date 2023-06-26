@@ -26,6 +26,12 @@ return {
 			keys[#keys + 1] = { "gK", false }
 			-- add a keymap
 			keys[#keys + 1] = { "<c-q>", vim.lsp.buf.hover, mode = { "n", "i" }, desc = "Hover" }
+			keys[#keys + 1] = {
+				"<leader>cs",
+				"<cmd>ClangdSwitchSourceHeader<cr>",
+				mode = { "n", "i" },
+				desc = "Switch source header",
+			}
 		end,
 	},
 }
