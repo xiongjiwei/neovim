@@ -31,10 +31,6 @@ return {
 		end,
 	},
 	{
-		"nvim-neo-tree/neo-tree.nvim",
-		enabled = false,
-	},
-	{
 		"nvim-treesitter/nvim-treesitter",
 		init = function()
 			require("nvim-treesitter.install").prefer_git = true

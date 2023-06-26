@@ -103,4 +103,8 @@ return {
 			vim.g.nvimtree_side = opts.view.side
 		end,
 	},
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		enabled = false,
+	},
 }
